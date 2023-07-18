@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { UPSERT } = require('sequelize/types/query-types');
+// const { UPSERT } = require('sequelize/types/query-types');
 const sequelize = require('../config/connection');
 // const { Post, User, Comment } = require('../')
 
@@ -79,3 +79,4 @@ router.get('/post/:id', (req, res) => {
     })
 })
 
+module.exports = router;

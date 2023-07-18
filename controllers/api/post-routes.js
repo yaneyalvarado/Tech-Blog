@@ -45,12 +45,12 @@ router.get('/:id', (req, res) => {
                 model: User, 
                 attributes: ['username', 'github']
             },
-            model: Comment, 
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-            include: {
-                model: User, 
-                attributes: ['username', 'github']
-            }
+            // model: Comment, 
+            // attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            // include: {
+            //     model: User, 
+            //     attributes: ['username', 'github']
+            // }
         ]
     })
     .then(dbPostData => {
@@ -79,28 +79,28 @@ router.post('/', withAuth, (req,res) => {
     });
 });
 
-router.put('/:id', withAuth, (req, res) => {
-    Post.update({
-        title: req.body.title,
-        post_content: req.body.post_content
-    },
-    {
-        where: {
-            id: req.params.id
-        }
-    })   
-})
-.then(dbPostData => {
-    if (!dbPostData) {
-        res.status(404).json({ message: 'No post found.' });
-        return;
-    }
-    res.json(dbPostData);
-})
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-  });
+// router.put('/:id', withAuth, (req, res) => {
+//     Post.update({
+//         title: req.body.title,
+//         post_content: req.body.post_content
+//     },
+//     {
+//         where: {
+//             id: req.params.id
+//         }
+//     })   
+// })
+// .then(dbPostData => {
+//     if (!dbPostData) {
+//         res.status(404).json({ message: 'No post found.' });
+//         return;
+//     }
+//     res.json(dbPostData);
+// })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).json(err);
+//   });
 
   router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
@@ -121,5 +121,5 @@ router.put('/:id', withAuth, (req, res) => {
     });
   });
 
-    module.exports = router;
+module.exports = router;
 

@@ -1,7 +1,7 @@
-const sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 
-require('dotnev').config();
-
+require('dotenv').config();
+console.log(process.env.DB_USER);
 let sequelize;
 
 if (process.env.JAWSDB_URL) {
@@ -12,11 +12,11 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_USER,
     process.env.DB_PW,
     {
-      host: 'localhost',
+      host: '127.0.0.1',
       dialect: 'mysql',
       port: 3306,
     },
   );
 }
 
-  module.exports = sequelize;
+module.exports = sequelize;
