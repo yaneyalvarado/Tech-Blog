@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const bycrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 
 // generating user model and establishing technique to check password
 class User extends Model {
     checkPassword(loginPW) {
-        return bycrypt.compareSync(loginPW, this.password);
+        return bcrypt.compareSync(loginPW, this.password);
     }
 }
 
@@ -56,9 +56,12 @@ User.init(
             return updatedUserData;
         }
     },
-    sequelize,
-    model: 'user'
-}
+    
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user'
+    },
 );
 
 module.exports = User;

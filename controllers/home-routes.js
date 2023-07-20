@@ -6,7 +6,7 @@ const sequelize = require('../config/connection');
 router.get('/', (req, res) => {
     console.log(req.session);
 
-    Post.findAll({
+    router.post.findAll({
         attributes: [
             'id',
             'title',
