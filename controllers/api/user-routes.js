@@ -49,7 +49,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// posting new api users
+// creating new users
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
