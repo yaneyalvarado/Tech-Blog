@@ -75,7 +75,7 @@ router.post('/login', (req, res) => {
     })
     .then(dbUserData => {
         if (!dbUserData) {
-            res.status(400).json({ message: 'No user found with the email address provided. '});
+           return res.status(400).json({ message: 'No user found with the email address provided. '});
         }
 
     const validPW = dbUserData.checkPW(req.body.password);
@@ -97,7 +97,7 @@ router.post('/login', (req, res) => {
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
-            res.status(404).end();
+            res.status(200).end();
         })
     } else {
         res.status(404).end();
