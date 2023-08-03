@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.password,
-        github: req.body.github
+        password: req.body.password
     })
     .then(dbUserData => {
     req.session.save(() => {
