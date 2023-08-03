@@ -114,4 +114,8 @@ router.get('/post/:id', (req, res) => {
     })
 })
 
+router.get('/dashboard/new', withAuth, (req, res) => {
+    res.render('create-post');
+});
+
 module.exports = router;
