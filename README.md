@@ -42,5 +42,9 @@ A CMS-style blog where developers can publish their blog posts and comment on ot
 - THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
 
 ## GitHub
+https://github.com/yaneyalvarado/Tech-Blog
 
-## Deployment
+## Demo
+https://drive.google.com/file/d/1FCZv6khCJez2TIKFfUvdGldBzDBiVlUS/view?usp=sharing
+
+## Deployment with Heroku
