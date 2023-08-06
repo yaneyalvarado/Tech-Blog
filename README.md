@@ -41,11 +41,19 @@ A CMS-style blog where developers can publish their blog posts and comment on ot
 - WHEN I am idle on the site for more than a set time
 - THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
 
-## GitHub
-https://github.com/yaneyalvarado/Tech-Blog
+## Mock Up
+![tech-blog](./public/assets/Homepage-Techblog.png)
+![tech-blog](./public/assets/Login-TechBlog.png)
+![tech-blog](./public/assets/Dashboard-Techblog.png)
+![tech-blog](./public/assets/CreateNewPost-Techblog.png)
+![tech-blog](./public/assets/PostCreated-Techblog.png)
+![tech-blog](./public/assets/Logout-Techblog.png)
 
-## Demo
+## Demo Video
 https://drive.google.com/file/d/1FCZv6khCJez2TIKFfUvdGldBzDBiVlUS/view?usp=sharing
 
 ## Deployment with Heroku
 https://calm-retreat-34165.herokuapp.com/
+
+## GitHub
+https://github.com/yaneyalvarado/Tech-Blog
