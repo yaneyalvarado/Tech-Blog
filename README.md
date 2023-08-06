@@ -42,11 +42,17 @@ A CMS-style blog where developers can publish their blog posts and comment on ot
 - THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
 
 ## Mock Up
+Homepage
 ![tech-blog](./public/assets/Homepage-Techblog.png)
+Signup/Login
 ![tech-blog](./public/assets/Login-TechBlog.png)
+Dashboard
 ![tech-blog](./public/assets/Dashboard-Techblog.png)
+Create a new Post
 ![tech-blog](./public/assets/CreateNewPost-Techblog.png)
+Post created
 ![tech-blog](./public/assets/PostCreated-Techblog.png)
+Logout
 ![tech-blog](./public/assets/Logout-Techblog.png)
 
 ## Demo Video
